@@ -1,0 +1,29 @@
+{
+  "name": "Twitter JUUL App",
+  "version": "0.1.0",
+  "description": "Hides potentially misleading content about JUULing",
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitter.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [],
+      "matches": ["https://*.twitter.com/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/twitter-logo2.png",
+      "24": "assets/twitter-logo2.png",
+      "32": "assets/twitter-logo2.png"
+    },
+    "default_title": "Twitter JUUL App",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}
